@@ -3,7 +3,7 @@
     <i class="material-icons icon">menu</i>
     <div>
       <i class="material-icons icon">search</i>
-      <img class="account-img" src="~/assets/img/account.png" alt="account" />
+      <img class="account-img" src="/img/account.png" alt="account" />
       <i class="material-icons icon">shopping_cart</i>
     </div>
   </header>
@@ -23,6 +23,7 @@
   }
 
   .account-img {
+    margin: 0 0.2rem;
     padding: 0.2rem;
     height: 2.2rem;
   }
