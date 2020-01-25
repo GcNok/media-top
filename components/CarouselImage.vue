@@ -1,6 +1,7 @@
 <template>
-  <div
+  <a
     class="carousel-image-wrapper"
+    :href="article.articleURL"
     :style="{ backgroundImage: 'url(' + article.articleImage + ')' }"
   >
     <div class="article-image">
@@ -18,7 +19,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </a>
 </template>
 
 <script lang="ts">
@@ -26,6 +27,7 @@ import { createComponent } from '@vue/composition-api'
 
 type CarouselArticle = {
   title: string
+  articleURL: string
   articleImage: string
   writerImage: string
   writerName: string

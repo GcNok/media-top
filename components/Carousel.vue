@@ -14,6 +14,7 @@ import CarouselImage from '@/components/CarouselImage.vue'
 
 type CarouselArticle = {
   title: string
+  articleURL: string
   articleImage: string
   writerImage: string
   writerName: string
@@ -31,6 +32,7 @@ export default createComponent({
       {
         title: `ふりかえ鉄板おすすめ人気ランキング10選
         【ごはん検定特Aライターが厳選！話題の商品紹介も】`,
+        articleURL: 'https://smashop.jp/subcategory/403700/special',
         articleImage: '/img/hurikake2.jpg',
         writerImage: '/img/writer.jpg',
         writerName: '実用書ライター：小田原',
@@ -40,6 +42,7 @@ export default createComponent({
       {
         title: `【徹底比較】カップラーメン鉄板おすすめランキング10選
         【商品を購入して食べ比べました】`,
+        articleURL: 'https://smashop.jp/subcategory/404000/special',
         articleImage: '/img/cup-noodle.jpg',
         writerImage: '/img/writer.jpg',
         writerName: '実用書ライター：小田原',
