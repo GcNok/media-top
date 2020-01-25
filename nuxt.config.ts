@@ -1,4 +1,7 @@
-export default {
+import { Configuration } from '@nuxt/types'
+
+const nuxtConfig: Configuration = {
+  // 中略
   mode: 'spa',
   /*
    ** Headers of the page
@@ -33,7 +36,8 @@ export default {
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@nuxt/typescript-build'
   ],
   /*
    ** Nuxt.js modules
@@ -57,3 +61,6 @@ export default {
     extend(config, ctx) {}
   }
 }
+
+module.exports = nuxtConfig
+
