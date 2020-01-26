@@ -55,8 +55,11 @@ export default createComponent({
   margin-right: 1rem;
   height: 12rem;
   min-width: 17rem;
-  box-shadow: inset 0 -6rem 2rem rgba(0, 0, 0, 0.6);
+  box-shadow: 0.2rem 0.2rem 10px rgba(0, 0, 0, 0.6),
+    inset 0 -6rem 2rem rgba(0, 0, 0, 0.6);
   background-size: cover;
+  text-decoration: none;
+  border-radius: 0.6rem;
 
   .article-image {
     display: grid;

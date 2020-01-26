@@ -1,16 +1,17 @@
 <template>
-  <section class="carousel-wrapper">
-    <CarouselImage
+  <section>
+    <ArticleLIstView
       v-for="(article, index) in articles"
       :key="index"
       :article="article"
+      :rank="index + 1"
     />
   </section>
 </template>
 
 <script lang="ts">
 import { createComponent, ref } from '@vue/composition-api'
-import CarouselImage from '@/components/CarouselImage.vue'
+import ArticleLIstView from '@/components/ArticleLIstView.vue'
 
 type Article = {
   title: string
@@ -20,11 +21,12 @@ type Article = {
   writerName: string
   updateTime: string
   viewNum: string
+  tags: string[]
 }
 
 export default createComponent({
   components: {
-    CarouselImage
+    ArticleLIstView
   },
   // eslint-disable-next-line prettier/prettier
   setup () {
@@ -37,7 +39,8 @@ export default createComponent({
         writerImage: '/img/writer.jpg',
         writerName: '実用書ライター：小田原',
         updateTime: '1時間前',
-        viewNum: '000,000'
+        viewNum: '000,000',
+        tag: ['徹底比較', '専門家']
       },
       {
         title: `【徹底比較】カップラーメン鉄板おすすめランキング10選
@@ -47,7 +50,8 @@ export default createComponent({
         writerImage: '/img/writer.jpg',
         writerName: '実用書ライター：小田原',
         updateTime: '1時間前',
-        viewNum: '000,000'
+        viewNum: '000,000',
+        tag: ['徹底比較', '専門家']
       },
       {
         title: `【徹底比較】発泡酒鉄板おすすめランキング11選
@@ -57,7 +61,8 @@ export default createComponent({
         writerImage: '/img/writer.jpg',
         writerName: '実用書ライター：小田原',
         updateTime: '1時間前',
-        viewNum: '000,000'
+        viewNum: '000,000',
+        tag: ['徹底比較', '専門家']
       }
     ])
 
@@ -67,11 +72,3 @@ export default createComponent({
   }
 })
 </script>
-
-<style lang="scss" scoped>
-.carousel-wrapper {
-  display: flex;
-  padding: 1rem;
-  overflow-x: scroll;
-}
-</style>
