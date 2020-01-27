@@ -1,4 +1,4 @@
-# composition-sample
+# media-top
 
 > My priceless Nuxt.js project
 
